@@ -1,30 +1,53 @@
-# React + TypeScript + Vite
+# React Router Starter 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma estrutura inicial robusta para aplicações React modernas, utilizando navegação dinâmica com Vite.
 
-Currently, two official plugins are available:
+## 🌟 Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* **Navegação Declarativa**: Gerenciamento de rotas com `react-router-dom` v6.
+* **Desenvolvimento Ultra-rápido**: Configurado com **Vite** para HMR (Hot Module Replacement) instantâneo.
+* **TypeScript**: Tipagem estática em toda a aplicação, incluindo componentes e rotas.
+* **Componentização**: Estrutura organizada com componentes globais (Header) e páginas independentes.
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+* **Core**: [React 18](https://reactjs.org/)
+* **Build Tool**: [Vite](https://vitejs.dev/)
+* **Linguagem**: [TypeScript](https://www.typescriptlang.org/)
+* **Roteamento**: [React Router DOM v6](https://reactrouter.com/)
+* **Qualidade de Código**: [ESLint](https://eslint.org/)
 
-- Configure the top-level `parserOptions` property like this:
+## 📂 Estrutura de Rotas
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+A aplicação está configurada com as seguintes rotas principais:
+
+| Caminho | Componente | Descrição |
+| --- | --- | --- |
+| `/` | `Home` | Página principal da aplicação. |
+| `/about` | `About` | Página de informações sobre o projeto. |
+
+## 🔧 Instalação e Execução
+
+1. **Clone o repositório:**
+```bash
+git clone https://github.com/jotor-dev/my-app-router.git
+cd my-app-router
 ```
+2. **Instale as dependências:**
+```bash
+npm install
+```
+3. **Inicie o servidor de desenvolvimento:**
+```bash
+npm run dev
+```
+4. **Acesse no navegador:**
+O projeto estará disponível em `http://localhost:5173`.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+## 📐 Organização do Código
+
+O arquivo principal `App.tsx` atua como o **Router Provider**, centralizando a lógica de navegação:
+
+* **`<Header />`**: Componente persistente que aparece em todas as rotas.
+* **`<Routes>`**: Gerenciador que renderiza o componente específico baseado na URL atual.
